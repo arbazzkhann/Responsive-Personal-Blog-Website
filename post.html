@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Post</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<h1>Post</h1>
+		<div class="header-actions">
+			<button id="themeToggle" class="secondary" type="button" title="Toggle theme">Toggle Theme</button>
+		</div>
+	</header>
+	<main>
+		<article class="post" id="postContainer">
+			<header>
+				<div>
+					<div class="post-title" id="postTitle">Loading…</div>
+					<div class="post-meta" id="postMeta"></div>
+				</div>
+				<div class="post-actions">
+					<a href="index.html" class="secondary" style="text-decoration:none;">
+						<button type="button" class="secondary">Back</button>
+					</a>
+					<button id="editBtn" type="button" class="secondary">Edit</button>
+					<button id="deleteBtn" type="button" class="secondary">Delete</button>
+				</div>
+			</header>
+			<div class="post-content" id="postContent"></div>
+		</article>
+
+		<section style="margin-top:1rem;">
+			<form id="editForm" hidden>
+				<input type="hidden" id="postId">
+				<label for="title">Title</label>
+				<input id="title" name="title" type="text" required>
+				<label for="category">Category</label>
+				<select id="category" name="category">
+					<option value="News">News</option>
+					<option value="Tips">Tips</option>
+					<option value="Tutorial">Tutorial</option>
+					<option value="Opinion">Opinion</option>
+					<option value="Announcement">Announcement</option>
+					<option value="Other">Other</option>
+				</select>
+				<label for="content">Content</label>
+				<textarea id="content" name="content" rows="6" required></textarea>
+				<div class="form-actions">
+					<button type="submit">Save</button>
+					<button id="cancelBtn" type="button" class="secondary">Cancel</button>
+				</div>
+			</form>
+		</section>
+	</main>
+	<footer>
+		<small>Made by ARBAZ KHAN</small>
+	</footer>
+	<script src="js/post.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Personal Blogs</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<h1>Responsive Personal Blog Website</h1>
+		<div class="header-actions">
+			<button id="themeToggle" class="secondary" type="button" title="Toggle theme">Toggle Theme</button>
+		</div>
+	</header>
+	<main>
+		<section>
+			<h2>Personal Blogs</h2>
+			<form id="postForm" aria-label="Create or edit blog post">
+				<input type="hidden" id="postId">
+				<label for="title">Title</label>
+				<input id="title" name="title" type="text" placeholder="Post title" required>
+				<label for="category">Category</label>
+				<select id="category" name="category">
+					<option value="News">News</option>
+					<option value="Tips">Tips</option>
+					<option value="Tutorial">Tutorial</option>
+					<option value="Opinion">Opinion</option>
+					<option value="Announcement">Announcement</option>
+					<option value="Other">Other</option>
+				</select>
+				<label for="content">Content</label>
+				<textarea id="content" name="content" rows="5" placeholder="Write something..." required></textarea>
+				<div class="form-actions">
+					<button type="submit" id="saveBtn">Save Post</button>
+					<button type="button" id="cancelEditBtn" class="secondary" hidden>Cancel Edit</button>
+				</div>
+			</form>
+		</section>
+		<section>
+			<h3>Posts</h3>
+			<div class="toolbar" role="region" aria-label="Posts controls">
+				<input id="searchInput" type="text" placeholder="Search title/content">
+				<select id="categoryFilter">
+					<option value="">All categories</option>
+				</select>
+				<select id="sortSelect" title="Sort by">
+					<option value="newest">Newest</option>
+					<option value="oldest">Oldest</option>
+					<option value="title-asc">Title A–Z</option>
+					<option value="title-desc">Title Z–A</option>
+				</select>
+				<div class="toolbar-actions">
+					<button type="button" id="exportBtn" class="secondary">Export</button>
+					<button type="button" id="importBtn" class="secondary">Import</button>
+					<input type="file" id="importFile" accept="application/json" hidden>
+					<button type="button" id="clearAllBtn" class="secondary">Clear All</button>
+				</div>
+			</div>
+			<div id="postsEmpty" class="muted">No posts yet. Add your first post above.</div>
+			<ul id="postsList" aria-live="polite"></ul>
+		</section>
+	</main>
+	<footer>
+		<small>Made by ARBAZ KHAN</small>
+	</footer>
+	<script src="js/script.js"></script>
+</body>
+</html>
